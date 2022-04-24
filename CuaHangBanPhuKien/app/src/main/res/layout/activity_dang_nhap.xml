@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.DangNhapActivity"
+    android:orientation="vertical">
+    <TextView
+        android:padding="15dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đăng nhập"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#4D000000"/>
+    <ImageView
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:src="@drawable/shopee_48px"/>
+    <EditText
+        android:text="Tondz"
+        android:id="@+id/edt_tendangnhap"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:drawableLeft="@drawable/ic_person"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Tên đăng nhập"/>
+    <EditText
+        android:text="123"
+        android:id="@+id/edt_matkhau"
+        android:inputType="textPassword"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:drawableLeft="@drawable/ic_lock"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Mật khẩu"/>
+    <Button
+        android:background="@color/primarycolor"
+        android:id="@+id/btn_dangnhap"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Đăng nhập"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textColor="@color/white"/>
+    <TextView
+        android:id="@+id/btn_dangky"
+        android:textSize="15sp"
+        android:textColor="#2196F3"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đăng ký tài khoản"/>
+</LinearLayout>

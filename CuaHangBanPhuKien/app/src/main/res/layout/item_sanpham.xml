@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="170dp"
+    android:layout_height="210dp"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="5dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/op" />
+
+    <TextView
+        android:id="@+id/tv_tensanpham"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+
+        android:gravity="center"
+        android:text="Op iphone cute"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tv_giaban"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:gravity="center"
+        android:text="đ50.000"
+        android:textColor="@color/primarycolor"
+        android:textStyle="bold" />
+
+</LinearLayout>
