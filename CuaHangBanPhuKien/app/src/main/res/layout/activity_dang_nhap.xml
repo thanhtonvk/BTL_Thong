@@ -26,7 +26,6 @@
         android:layout_height="96dp"
         android:src="@drawable/shopee_48px"/>
     <EditText
-        android:text="Tondz"
         android:id="@+id/edt_tendangnhap"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
@@ -37,7 +36,7 @@
         android:layout_height="60dp"
         android:hint="Tên đăng nhập"/>
     <EditText
-        android:text="123"
+
         android:id="@+id/edt_matkhau"
         android:inputType="textPassword"
         android:layout_marginLeft="20dp"
