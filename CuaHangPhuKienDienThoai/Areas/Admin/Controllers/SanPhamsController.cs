@@ -17,7 +17,7 @@ namespace CuaHangPhuKienDienThoai.Areas.Admin.Controllers
         // GET: Admin/SanPhams
         public ActionResult Index()
         {
-            var sanPhams = db.SanPhams.Include(s => s.HangSanXuat1).Include(s => s.LoaiSanPham1);
+            var sanPhams = db.SanPhams;
             return View(sanPhams.ToList());
         }
 

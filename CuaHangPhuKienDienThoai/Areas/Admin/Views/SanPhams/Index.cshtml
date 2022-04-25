@@ -12,12 +12,7 @@
 </p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.HangSanXuat1.TenHang)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LoaiSanPham1.TenLoai)
-        </th>
+
         <th>
             @Html.DisplayNameFor(model => model.TenSP)
         </th>
@@ -27,55 +22,31 @@
         <th>
             @Html.DisplayNameFor(model => model.MoTa)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.GiaBan)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SPMoi)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.GiamGia)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.IsActive)
-        </th>
+
         <th></th>
     </tr>
 
     @foreach (var item in Model)
     {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.HangSanXuat1.TenHang)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LoaiSanPham1.TenLoai)
-            </td>
+
             <td>
                 @Html.DisplayFor(modelItem => item.TenSP)
             </td>
             <td>
-                <img src="@item.HinhAnh" height="300"/>
+                <img src="@item.HinhAnh" height="300" />
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.MoTa)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.GiaBan)
+                @Html.DisplayFor(modelItem => item.GiaBan)đ
             </td>
+
             <td>
-                @Html.DisplayFor(modelItem => item.SPMoi)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GiamGia)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsActive)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new {id = item.ID}) |
-                @Html.ActionLink("Details", "Details", new {id = item.ID}) |
-                @Html.ActionLink("Delete", "Delete", new {id = item.ID})
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new {@class = "btn btn-primary"}) 
+                <a href="@Url.Action("Index", "ChiTietSanPhams", new {id = item.ID})" class="btn btn-success">Chi tiết sản phẩm</a>
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID },new {@class = "btn btn-danger"})
             </td>
         </tr>
     }

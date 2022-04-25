@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Locale;
 
 public class Common {
-    public static String serverLink = "http://192.168.1.107:1433";
+    public static String serverLink = "https://cuahangphukiendienthoai.conveyor.cloud/";
     public static TaiKhoan taiKhoan;
     public static List<SanPham> sanPhamList;
     public static SanPham sanPham;

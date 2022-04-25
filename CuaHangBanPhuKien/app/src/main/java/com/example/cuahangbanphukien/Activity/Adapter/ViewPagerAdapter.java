@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import com.example.cuahangbanphukien.Activity.Fragment.CaNhanFragment;
+
 import com.example.cuahangbanphukien.Activity.Fragment.GioHangFragment;
 import com.example.cuahangbanphukien.Activity.Fragment.TrangChuFragment;
 
@@ -22,8 +22,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
                 return new TrangChuFragment();
             case 1:
                 return new GioHangFragment();
-            case 2:
-                return new CaNhanFragment();
+
             default:
                 return new TrangChuFragment();
         }
@@ -31,6 +30,6 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public int getCount() {
-        return 3;
+        return 2;
     }
 }

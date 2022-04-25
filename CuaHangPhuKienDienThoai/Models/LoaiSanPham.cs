@@ -9,11 +9,7 @@ namespace CuaHangPhuKienDienThoai.Models
     [Table("LoaiSanPham")]
     public partial class LoaiSanPham
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public LoaiSanPham()
-        {
-            SanPhams = new HashSet<SanPham>();
-        }
+      
 
         public int ID { get; set; }
 
@@ -26,7 +22,6 @@ namespace CuaHangPhuKienDienThoai.Models
 
         public bool? IsActive { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SanPham> SanPhams { get; set; }
+ 
     }
 }

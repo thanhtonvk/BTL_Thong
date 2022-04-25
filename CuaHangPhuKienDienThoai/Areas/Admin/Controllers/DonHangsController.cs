@@ -17,7 +17,7 @@ namespace CuaHangPhuKienDienThoai.Areas.Admin.Controllers
         // GET: Admin/DonHangs
         public ActionResult Index()
         {
-            var donHangs = db.DonHangs.Include(d => d.TaiKhoan1);
+            var donHangs = db.DonHangs;
             return View(donHangs.ToList());
         }
 

@@ -15,9 +15,9 @@ namespace CuaHangPhuKienDienThoai.Areas.Admin.Controllers
         private DBContext db = new DBContext();
 
         // GET: Admin/ChiTietDonHangs
-        public ActionResult Index()
+        public ActionResult Index(int id)
         {
-            var chiTietDonHangs = db.ChiTietDonHangs.Include(c => c.ChiTietSanPham1).Include(c => c.DonHang1);
+            var chiTietDonHangs = db.ChiTietDonHangs.Where(x=>x.DonHang==id);
             return View(chiTietDonHangs.ToList());
         }
 
@@ -57,9 +57,10 @@ namespace CuaHangPhuKienDienThoai.Areas.Admin.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
-            ViewBag.ChiTietSanPham = new SelectList(db.ChiTietSanPhams, "ID", "TenChiTiet", chiTietDonHang.ChiTietSanPham);
-            ViewBag.DonHang = new SelectList(db.DonHangs, "ID", "TaiKhoan", chiTietDonHang.DonHang);
+            var chiTietSanPhams = db.ChiTietSanPhams.Where(x => x.ID==chiTietDonHang.ChiTietSanPham);
+            var donHangs = db.DonHangs.Where(x => x.ID == chiTietDonHang.DonHang);
+            ViewBag.ChiTietSanPham = new SelectList(db.ChiTietSanPhams, "ID", "TenChiTiet", chiTietSanPhams);
+            ViewBag.DonHang = new SelectList(db.DonHangs, "ID", "TaiKhoan", donHangs);
             return View(chiTietDonHang);
         }
 
@@ -75,8 +76,10 @@ namespace CuaHangPhuKienDienThoai.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.ChiTietSanPham = new SelectList(db.ChiTietSanPhams, "ID", "TenChiTiet", chiTietDonHang.ChiTietSanPham);
-            ViewBag.DonHang = new SelectList(db.DonHangs, "ID", "TaiKhoan", chiTietDonHang.DonHang);
+            var chiTietSanPhams = db.ChiTietSanPhams.Where(x => x.ID == chiTietDonHang.ChiTietSanPham);
+            var donHangs = db.DonHangs.Where(x => x.ID == chiTietDonHang.DonHang);
+            ViewBag.ChiTietSanPham = new SelectList(db.ChiTietSanPhams, "ID", "TenChiTiet", chiTietSanPhams);
+            ViewBag.DonHang = new SelectList(db.DonHangs, "ID", "TaiKhoan", donHangs);
             return View(chiTietDonHang);
         }
 
@@ -93,8 +96,10 @@ namespace CuaHangPhuKienDienThoai.Areas.Admin.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.ChiTietSanPham = new SelectList(db.ChiTietSanPhams, "ID", "TenChiTiet", chiTietDonHang.ChiTietSanPham);
-            ViewBag.DonHang = new SelectList(db.DonHangs, "ID", "TaiKhoan", chiTietDonHang.DonHang);
+            var chiTietSanPhams = db.ChiTietSanPhams.Where(x => x.ID == chiTietDonHang.ChiTietSanPham);
+            var donHangs = db.DonHangs.Where(x => x.ID == chiTietDonHang.DonHang);
+            ViewBag.ChiTietSanPham = new SelectList(db.ChiTietSanPhams, "ID", "TenChiTiet", chiTietSanPhams);
+            ViewBag.DonHang = new SelectList(db.DonHangs, "ID", "TaiKhoan", donHangs);
             return View(chiTietDonHang);
         }
 

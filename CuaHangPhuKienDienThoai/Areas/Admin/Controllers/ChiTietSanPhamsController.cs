@@ -15,9 +15,9 @@ namespace CuaHangPhuKienDienThoai.Areas.Admin.Controllers
         private DBContext db = new DBContext();
 
         // GET: Admin/ChiTietSanPhams
-        public ActionResult Index()
+        public ActionResult Index(int id)
         {
-            var chiTietSanPhams = db.ChiTietSanPhams.Include(c => c.SanPham1);
+            var chiTietSanPhams = db.ChiTietSanPhams.Where(x=>x.SanPham==id);
             return View(chiTietSanPhams.ToList());
         }
 
@@ -57,7 +57,8 @@ namespace CuaHangPhuKienDienThoai.Areas.Admin.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.SanPham = new SelectList(db.SanPhams, "ID", "TenSP", chiTietSanPham.SanPham);
+            var SanPhams = db.SanPhams.Find(chiTietSanPham.SanPham);
+            ViewBag.SanPham = new SelectList(db.SanPhams, "ID", "TenSP", SanPhams);
             return View(chiTietSanPham);
         }
 
@@ -73,7 +74,8 @@ namespace CuaHangPhuKienDienThoai.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.SanPham = new SelectList(db.SanPhams, "ID", "TenSP", chiTietSanPham.SanPham);
+            var SanPhams = db.SanPhams.Find(chiTietSanPham.SanPham);
+            ViewBag.SanPham = new SelectList(db.SanPhams, "ID", "TenSP", SanPhams);
             return View(chiTietSanPham);
         }
 
@@ -90,7 +92,8 @@ namespace CuaHangPhuKienDienThoai.Areas.Admin.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.SanPham = new SelectList(db.SanPhams, "ID", "TenSP", chiTietSanPham.SanPham);
+            var SanPhams = db.SanPhams.Find(chiTietSanPham.SanPham);
+            ViewBag.SanPham = new SelectList(db.SanPhams, "ID", "TenSP", SanPhams);
             return View(chiTietSanPham);
         }
 

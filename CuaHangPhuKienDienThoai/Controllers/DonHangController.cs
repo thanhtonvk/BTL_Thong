@@ -11,15 +11,20 @@ namespace CuaHangPhuKienDienThoai.Controllers
 
         [HttpPost]
         [Route("api/DonHang/ThemDonHang")]
-        public IHttpActionResult ThemDonHang([FromBody] DonHang donHang, [FromBody] List<GioHang> gioHangs)
+        public IHttpActionResult ThemDonHang([FromBody] DonHang donHang)
         {
+            var gioHangs = db.GioHangs.Where(x => x.TaiKhoan.Equals(donHang.TaiKhoan));
             db.DonHangs.Add(donHang);
+            db.SaveChanges();
             foreach (var gioHang in gioHangs)
             {
                 ChiTietDonHang chiTietDonHang = new ChiTietDonHang()
                 {
-                    DonHang = donHang.ID, ChiTietSanPham = gioHang.ChiTietSanPham, TenChiTiet = gioHang.TenChiTiet,
-                    GiaBan = gioHang.GiaBan, SoLuong = gioHang.SoLuong
+                    DonHang = donHang.ID,
+                    ChiTietSanPham = gioHang.ChiTietSanPham,
+                    TenChiTiet = gioHang.TenChiTiet,
+                    GiaBan = gioHang.GiaBan,
+                    SoLuong = gioHang.SoLuong
                 };
                 db.ChiTietDonHangs.Add(chiTietDonHang);
             }
@@ -53,6 +58,6 @@ namespace CuaHangPhuKienDienThoai.Controllers
         {
             return db.ChiTietDonHangs.Where(x => x.DonHang == IDDonHang);
         }
-        
+
     }
 }

@@ -111,7 +111,7 @@ public interface APIService {
             .create(APIService.class);
 
     @POST("ThemDonHang")
-    Call<String> themDonHang(@Body DonHang donHang, @Body List<GioHang> gioHangs);
+    Call<String> themDonHang(@Body DonHang donHang);
 
     @GET("GetDonHang")
     Call<List<DonHang>> getDonHang(@Query("TaiKhoan") String taiKhoan);

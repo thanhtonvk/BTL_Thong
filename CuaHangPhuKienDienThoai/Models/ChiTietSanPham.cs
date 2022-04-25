@@ -9,12 +9,7 @@ namespace CuaHangPhuKienDienThoai.Models
     [Table("ChiTietSanPham")]
     public partial class ChiTietSanPham
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public ChiTietSanPham()
-        {
-            ChiTietDonHangs = new HashSet<ChiTietDonHang>();
-            GioHangs = new HashSet<GioHang>();
-        }
+        
 
         public int ID { get; set; }
 
@@ -31,12 +26,6 @@ namespace CuaHangPhuKienDienThoai.Models
 
         public bool? IsActive { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChiTietDonHang> ChiTietDonHangs { get; set; }
-
-        public virtual SanPham SanPham1 { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<GioHang> GioHangs { get; set; }
+      
     }
 }

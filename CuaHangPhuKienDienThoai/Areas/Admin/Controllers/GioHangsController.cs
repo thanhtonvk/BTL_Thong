@@ -17,7 +17,7 @@ namespace CuaHangPhuKienDienThoai.Areas.Admin.Controllers
         // GET: Admin/GioHangs
         public ActionResult Index()
         {
-            var gioHangs = db.GioHangs.Include(g => g.ChiTietSanPham1).Include(g => g.TaiKhoan1);
+            var gioHangs = db.GioHangs;
             return View(gioHangs.ToList());
         }
 

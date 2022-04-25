@@ -24,8 +24,6 @@ namespace CuaHangPhuKienDienThoai.Models
 
         public int SoLuong { get; set; }
 
-        public virtual ChiTietSanPham ChiTietSanPham1 { get; set; }
-
-        public virtual TaiKhoan TaiKhoan1 { get; set; }
+    
     }
 }

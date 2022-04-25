@@ -54,9 +54,7 @@ namespace CuaHangPhuKienDienThoai.Controllers
             }
 
             return db.SanPhams.Where(x =>
-                x.TenSP.ToLower().Contains(TuKhoa.ToLower()) ||
-                x.HangSanXuat1.TenHang.ToLower().Contains(TuKhoa.ToLower()) ||
-                x.LoaiSanPham1.TenLoai.ToLower().Contains(TuKhoa.ToLower()));
+                x.TenSP.ToLower().Contains(TuKhoa.ToLower()));
         }
 
 

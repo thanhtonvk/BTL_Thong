@@ -7,11 +7,8 @@ public class GioHang {
     private String TenChiTiet;
     private int GiaBan;
     private int SoLuong;
-    private ChiTietSanPham ChiTietSanPham1;
 
-    public ChiTietSanPham getChiTietSanPham1() {
-        return ChiTietSanPham1;
-    }
+
 
     public GioHang() {
 

@@ -54,4 +54,11 @@ public class DonHang {
         this.SDT = SDT;
         TinhTrang = tinhTrang;
     }
+
+    public DonHang(String taiKhoan, String diaChi, String SDT, String tinhTrang) {
+        TaiKhoan = taiKhoan;
+        DiaChi = diaChi;
+        this.SDT = SDT;
+        TinhTrang = tinhTrang;
+    }
 }

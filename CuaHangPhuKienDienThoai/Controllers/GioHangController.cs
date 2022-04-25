@@ -13,17 +13,7 @@ namespace CuaHangPhuKienDienThoai.Controllers
         [Route("api/GioHang/ThemGioHang")]
         public IHttpActionResult ThemGioHang([FromBody] GioHang gioHang)
         {
-            var index = KTTonTai(gioHang.ChiTietSanPham);
-            if (index != -1)
-            {
-                gioHang.SoLuong += 1;
-                db.GioHangs.Add(gioHang);
-                db.Entry(gioHang).State = EntityState.Modified;
-            }
-            else
-            {
-                db.GioHangs.Add(gioHang);
-            }
+            db.GioHangs.Add(gioHang);
 
             if (db.SaveChanges() > 0)
             {

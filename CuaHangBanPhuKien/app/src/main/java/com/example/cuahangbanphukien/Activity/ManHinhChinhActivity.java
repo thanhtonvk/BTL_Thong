@@ -38,9 +38,7 @@ public class ManHinhChinhActivity extends AppCompatActivity {
                     case 1:
                         bottomNavigationView.getMenu().findItem(R.id.menu_cart).setChecked(true);
                         break;
-                    case 2:
-                        bottomNavigationView.getMenu().findItem(R.id.menu_person).setChecked(true);
-                        break;
+
                 }
             }
 
@@ -59,9 +57,7 @@ public class ManHinhChinhActivity extends AppCompatActivity {
                     case R.id.menu_cart:
                         viewPager.setCurrentItem(1);
                         break;
-                    case R.id.menu_person:
-                        viewPager.setCurrentItem(2);
-                        break;
+
                 }
                 return true;
             }

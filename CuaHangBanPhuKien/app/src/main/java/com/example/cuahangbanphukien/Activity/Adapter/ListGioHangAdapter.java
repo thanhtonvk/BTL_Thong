@@ -50,7 +50,6 @@ public class ListGioHangAdapter extends ArrayAdapter<GioHang> {
         tv_tensp.setText(gioHang.getTenChiTiet());
         tv_giaban.setText(Common.formatMoney(gioHang.getGiaBan()));
         edt_soluong.setText(gioHang.getSoLuong() + "");
-        Glide.with(getContext()).load(gioHang.getChiTietSanPham1().getHinhAnh()).into(img);
         btn_giam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

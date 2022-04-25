@@ -21,6 +21,18 @@
         <entry key="..\:/Android/CuaHangBanPhuKien/app/src/main/res/layout/item_hangsx.xml" value="0.36666666666666664" />
         <entry key="..\:/Android/CuaHangBanPhuKien/app/src/main/res/layout/item_sanpham.xml" value="0.33" />
         <entry key="..\:/Android/CuaHangBanPhuKien/app/src/main/res/menu/menu_bottom_nav.xml" value="0.20677083333333332" />
+        <entry key="..\:/LamThue/BTL_Thong/CuaHangBanPhuKien/app/src/main/res/layout/activity_chi_tiet_san_pham.xml" value="0.36666666666666664" />
+        <entry key="..\:/LamThue/BTL_Thong/CuaHangBanPhuKien/app/src/main/res/layout/activity_dang_ky.xml" value="0.36666666666666664" />
+        <entry key="..\:/LamThue/BTL_Thong/CuaHangBanPhuKien/app/src/main/res/layout/activity_dang_nhap.xml" value="0.36666666666666664" />
+        <entry key="..\:/LamThue/BTL_Thong/CuaHangBanPhuKien/app/src/main/res/layout/activity_dat_hang.xml" value="0.3020833333333333" />
+        <entry key="..\:/LamThue/BTL_Thong/CuaHangBanPhuKien/app/src/main/res/layout/activity_dssan_pham.xml" value="0.36666666666666664" />
+        <entry key="..\:/LamThue/BTL_Thong/CuaHangBanPhuKien/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/LamThue/BTL_Thong/CuaHangBanPhuKien/app/src/main/res/layout/activity_man_hinh_chinh.xml" value="0.36666666666666664" />
+        <entry key="..\:/LamThue/BTL_Thong/CuaHangBanPhuKien/app/src/main/res/layout/dialog_chi_tiet_san_pham.xml" value="0.36666666666666664" />
+        <entry key="..\:/LamThue/BTL_Thong/CuaHangBanPhuKien/app/src/main/res/layout/fragment_ca_nhan.xml" value="0.26515151515151514" />
+        <entry key="..\:/LamThue/BTL_Thong/CuaHangBanPhuKien/app/src/main/res/layout/fragment_gio_hang.xml" value="0.3020833333333333" />
+        <entry key="..\:/LamThue/BTL_Thong/CuaHangBanPhuKien/app/src/main/res/layout/fragment_trang_chu.xml" value="0.27851458885941643" />
+        <entry key="..\:/LamThue/BTL_Thong/CuaHangBanPhuKien/app/src/main/res/layout/item_giohang.xml" value="0.18854166666666666" />
       </map>
     </option>
   </component>
